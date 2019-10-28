@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Введите номер телефона, URL или координаты"
+            android:text="" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickCheck"
+            android:text="Выбирать автоматически" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Телефон" />
+
+            <RadioButton
+                android:id="@+id/radioUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="URL" />
+
+            <RadioButton
+                android:id="@+id/radioCoords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Координаты" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="Открыть" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
